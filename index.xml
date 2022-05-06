@@ -2,36 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>alexboehm</title>
-    <link>http://www.example.com/</link>
+    <link>https://alexboehm.space/</link>
     <description>Recent content on alexboehm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 06 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alexboehm.space/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Choosing a programming language</title>
+      <link>https://alexboehm.space/posts/what_language_to_learn/</link>
+      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexboehm.space/posts/what_language_to_learn/</guid>
+      <description>An exploration into where to invest my time.
+No programming language is perfect, but learning to get the most out of one can take years, which is a long enough timespan that serious thought has to be put into which one to choose. Additionally, if the perfect programming laguage came along, it probably probably wouldn&amp;rsquo;t be the best choice for getting something done, because you wouldn&amp;rsquo;t be able to use the awesome collection of open source libraries that already exist in sub optimal languages.</description>
+    </item>
+    
     <item>
       <title>About</title>
-      <link>http://www.example.com/about/</link>
+      <link>https://alexboehm.space/about/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/about/</guid>
-      <description>I am an enthusiastic programmer and student at the 42 Adelaide school looking for part time work to utilise my skills and enable expansion.
-I am passionate about technology, have years of experience in system administration of software and hardware.</description>
+      <guid>https://alexboehm.space/about/</guid>
+      <description>I am an enthusiastic programmer working for OzRunways and a student at the 42 School.
+I am passionate about technology and have years of experience in system administration of software and hardware.</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>http://www.example.com/contact/</link>
+      <link>https://alexboehm.space/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/contact/</guid>
+      <guid>https://alexboehm.space/contact/</guid>
       <description>Email: alexboehm@systemli.org
 github: github.com/fourlexboehm</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>http://www.example.com/projects/</link>
+      <link>https://alexboehm.space/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/projects/</guid>
+      <guid>https://alexboehm.space/projects/</guid>
       <description>Nothing to see here&amp;hellip; Move along!</description>
     </item>
     

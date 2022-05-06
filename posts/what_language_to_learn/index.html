@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+  
+
+  
+  <meta name="author" content="Alex Boehm">
+  <meta name="description" content="I&#39;m Alex, a FOSS and self hosting advocate.">
+  <meta name="keywords" content="blog,developer,personal">
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Choosing a programming language"/>
+<meta name="twitter:description" content="I&#39;m Alex, a FOSS and self hosting advocate."/>
+
+  <meta property="og:title" content="Choosing a programming language" />
+<meta property="og:description" content="I&#39;m Alex, a FOSS and self hosting advocate." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://alexboehm.space/posts/what_language_to_learn/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-06T00:00:00+00:00" />
+
+
+
+  <title>
+  Choosing a programming language · alexboehm
+</title>
+
+  
+  <link rel="canonical" href="https://alexboehm.space/posts/what_language_to_learn/">
+  
+
+  <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+
+  
+
+  <link rel="icon" type="image/png" href="/%20/images/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="/%20/images/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/%20/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/%20/images/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.98.0" />
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      alexboehm
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://alexboehm.space/posts/what_language_to_learn/">
+              Choosing a programming language
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2022-04-06T00:00:00Z">
+                6nd April, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p><em>An exploration into where to invest my time.</em></p>
+<p>No programming language is perfect, but learning to get the most out of one can take years, which is a long enough timespan that serious thought has to be put into which one to choose.
+Additionally, if the perfect programming laguage came along, it probably probably wouldn&rsquo;t be the best choice for getting something done, because you wouldn&rsquo;t be able to
+use the awesome collection of open source libraries that already exist in sub optimal languages.</p>
+<h2 id="c">
+  c
+  <a class="heading-link" href="#c">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>was the first language grasped well enough to call myself a <em>programmer</em>, which influences my taste in all other languages. It is a great language to how computers work,
+and great for interacting with hardware. Unfortunately, it is poorly standardised, difficult to write safely, and uses header files that require you to repeat yourself constantly and deal with depenancy loops.</p>
+<p>One particularly difficult task in C is error handling.
+As C functions can only have one return type, you end up either using <a href="https://hackernoon.com/null-the-billion-dollar-mistake-8t5z32d6">unsafe nulls</a> as the return type handle errors,
+having a global error struct that you pass to the function:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>struct errors{
+</span></span><span style="display:flex;"><span>  bool IO_error;
+</span></span><span style="display:flex;"><span>  bool malloc_error;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>char *function(char *str, struct errors *errors){
+</span></span><span style="display:flex;"><span>  char *str2 = malloc(strlen(str));
+</span></span><span style="display:flex;"><span>  if (!str2)
+</span></span><span style="display:flex;"><span>    errors-&gt;malloc_error = true;
+</span></span><span style="display:flex;"><span>  strdup(str);
+</span></span><span style="display:flex;"><span>  return (str2);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This is quite verbose, an alternative is to return an integer if there&rsquo;s an error, this leads to nicer function calls as you can evaluate functions:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (mutate_thing(thing)) return ;
+</span></span></code></pre></div><p>Unfortunately this makes it much more difficult to read code quickly and determine what is a functions input an what is an output:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (do_thing(thing, modified_thing)) return ;
+</span></span></code></pre></div><p>A partial solution to this is to use the const keyword on input, but this can easily be casted away or modified in another way.
+Java deals with errors by using mandatory exceptions, a separate mandatory return type in all methods.
+Unfortunately, this leads to try catch statements everywhere, that reduce code readability, increase verbosity and greatly increase the time required to quickly prototype code.</p>
+<h2 id="rust">
+  Rust
+  <a class="heading-link" href="#rust">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>is a nice solution to this has a lot of things going for it, it has no concept of null so when an error can return a function, instead of returning a type you can returns a Result which is an enum containing either
+the type or an error which can be either Ok(T) or Err(E). You can use .unwrap() to get the return type and handle errors.</p>
+<p>There are many other benefits to rust, it&rsquo;s type safety, asyncronous functions, thread safety and of course memory safety
+that make it desirable. Additionally its lack of garbage collection is still important in my opinion.</p>
+<p>The problem I&rsquo;ve had with learning it is that the standard library is quite limited compared to GoLang and other modern languages
+this makes it so I&rsquo;ve spent a lot of time finding which library to use even for basic tasks. Rust is a community driven project though so this is to be expected. Cargo, Rusts build tool and package manager
+is a breathe of fresh air after dealing with C, make and header files. Unfortunately, due to Rust&rsquo;s C compatibility, it&rsquo;s standard library depends on a systems lib-C so the threat of header file hell isn&rsquo;t totally gone.
+Fortunately it&rsquo;s unlikely these libraries will cause a problem, but it does make using rust libraries on Kubernetes more memory expensive than GoLang.</p>
+<p>Unfortunately, Cargo does bring in other problems, mostly to do with poorly thought out and poorly trusted dependencies.</p>
+<p><img src="/images/1*fMh_BsX_5h2MZBqVj_no5A.png" alt="node_js" title="meme"></p>
+<p>Combine this with Rusts build times thanks to the borrow checker and static analysis and build times are enormous.</p>
+<h2 id="golang">
+  GoLang
+  <a class="heading-link" href="#golang">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>solves the build times skipping the static analysis and going back to garbage collection, and using a compiler built from the ground up. But still inherits the concept of packages, but with go modules that are basically just git repositories. This means building isn&rsquo;t as easy, but thanks to Go&rsquo;s monolithic standard library, you don&rsquo;t need to use it as much. Also go is much easier to learn it&rsquo;s syntax is mostly a subset of C and there is no borrow checker.</p>
+<p>Despite this, complex problems are more difficult to solve with more limited tools, and despite it&rsquo;s garbage collection, Go is not totally memory safe. It still allows usage of raw pointers, and Go Routines despite being very simple do not guarantee thread safety. Also, go is weird. It breaks the datetime format standard by using a <a href="https://golangbyexample.com/time-date-formatting-in-go/">placeholder date you&rsquo;re expected to memorise</a></p>
+<h2 id="kotlin">
+  Kotlin
+  <a class="heading-link" href="#kotlin">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>doesn&rsquo;t suffer from this oddity and includes tools for advanced abstraction, type safety, null safety, and functional programming but is much quicker to write than rust, as it&rsquo;s garbage collected.</p>
+<p>While Kotlin can compile to assembly, and even javascript, this is rarely useful as all the vast majority of it&rsquo;s useful libraries have Java dependencies. In fact, writing Kotlin will probably always involve interacting with Java classes, which means learning Java and dealing with Java&rsquo;s verbosity, mandatory object oriented programming scheme, exception handling and decades of technical debt.</p>
+<h2 id="the-winner-is">
+  The Winner is
+  <a class="heading-link" href="#the-winner-is">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>&hellip; No one. I&rsquo;m going to continue searching for that impossible perfection and probably continue and using all of these languages in the meantime.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+  </main>
+
+  
+  
+  <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

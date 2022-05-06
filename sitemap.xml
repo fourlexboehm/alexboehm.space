@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://www.example.com/about/</loc>
+    <loc>https://alexboehm.space/</loc>
+    <lastmod>2022-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alexboehm.space/posts/what_language_to_learn/</loc>
+    <lastmod>2022-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alexboehm.space/posts/</loc>
+    <lastmod>2022-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alexboehm.space/about/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/</loc>
+    <loc>https://alexboehm.space/authors/</loc>
   </url><url>
-    <loc>http://www.example.com/authors/</loc>
+    <loc>https://alexboehm.space/categories/</loc>
   </url><url>
-    <loc>http://www.example.com/categories/</loc>
+    <loc>https://alexboehm.space/contact/</loc>
   </url><url>
-    <loc>http://www.example.com/contact/</loc>
+    <loc>https://alexboehm.space/projects/</loc>
   </url><url>
-    <loc>http://www.example.com/projects/</loc>
+    <loc>https://alexboehm.space/series/</loc>
   </url><url>
-    <loc>http://www.example.com/series/</loc>
-  </url><url>
-    <loc>http://www.example.com/tags/</loc>
+    <loc>https://alexboehm.space/tags/</loc>
   </url>
 </urlset>
