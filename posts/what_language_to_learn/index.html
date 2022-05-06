@@ -167,11 +167,11 @@ use the awesome collection of open source libraries that already exist in sub op
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p>Was the first language grasped well enough to call myself a <em>programmer</em>, which influences my taste in all other languages. It is a great language to how computers work,
+<p>Was the first language grasped well enough to call myself a <em>programmer</em>, which influences my taste in all other languages. It is a great language to learn how computers work,
 and great for interacting with hardware. Unfortunately, it is poorly standardised, difficult to write safely, and uses header files that require you to repeat yourself constantly and deal with dependency loops.</p>
 <p>One particularly difficult task in C is error handling.
-As C functions can only have one return type, you end up either using <a href="https://hackernoon.com/null-the-billion-dollar-mistake-8t5z32d6">unsafe nulls</a> as the return type handle errors,
-having a global error struct that you pass to the function:</p>
+As C functions can only have one return type, you end up either using <a href="https://hackernoon.com/null-the-billion-dollar-mistake-8t5z32d6">unsafe nulls</a> as the return type to handle errors, ignoring errors,
+having a global error struct that you pass to the function which is quite verbose:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>struct errors{
 </span></span><span style="display:flex;"><span>  bool IO_error;
 </span></span><span style="display:flex;"><span>  bool malloc_error;
@@ -184,38 +184,38 @@ having a global error struct that you pass to the function:</p>
 </span></span><span style="display:flex;"><span>  strdup(str);
 </span></span><span style="display:flex;"><span>  return (str2);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>This is quite verbose, an alternative is to return an integer if there&rsquo;s an error, this leads to nicer function calls as you can evaluate functions:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (mutate_thing(thing)) return ;
+</span></span></code></pre></div><p>or returning an integer if there&rsquo;s an error, this leads to nicer function calls as you can evaluate functions:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (mutate_thing(thing)) exit(1);
 </span></span></code></pre></div><p>Unfortunately this makes it much more difficult to read code quickly and determine what is a functions input an what is an output:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (do_thing(thing, modified_thing)) return ;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (do_thing(thing, modified_thing)) exit(1) ;
 </span></span></code></pre></div><p>A partial solution to this is to use the const keyword on input, but this can easily be casted away or modified in another way.
 Java deals with errors by using mandatory exceptions, a separate mandatory return type in all methods.
-Unfortunately, this leads to try catch statements everywhere, that reduce code readability, increase verbosity and greatly increase the time required to quickly prototype code.</p>
+Unfortunately, this leads to try catch statements everywhere or exceptions that must be followed around that reduce code readability, increase verbosity and greatly increase the time required to quickly prototype code.</p>
 <h2 id="rust">
   Rust
   <a class="heading-link" href="#rust">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p>Is a nice solution to this has a lot of things going for it, it has no concept of null so when an error can return a function, instead of returning a type you can returns a Result which is an enum containing either
+<p>Is a nice solution to this and has a lot of things going for it, it has no concept of null so when a function can return an error, instead of returning a type you can returns a Result which is an enum containing either
 the type or an error which can be either Ok(T) or Err(E). You can use .unwrap() to get the return type and handle errors.</p>
 <p>There are many other benefits to rust, it&rsquo;s type safety, asyncronous functions, thread safety and of course memory safety
-that make it desirable. Additionally its lack of garbage collection is still important in my opinion.</p>
-<p>The problem I&rsquo;ve had with learning it is that the standard library is quite limited compared to GoLang and other modern languages
-this makes it so I&rsquo;ve spent a lot of time finding which library to use even for basic tasks. Rust is a community driven project though so this is to be expected. Cargo, Rusts build tool and package manager
-is a breathe of fresh air after dealing with C, make and header files. Unfortunately, due to Rust&rsquo;s C compatibility, it&rsquo;s standard library depends on a systems lib-C so the threat of header file hell isn&rsquo;t totally gone.
-Fortunately it&rsquo;s unlikely these libraries will cause a problem, but it does make using rust libraries on Kubernetes more memory expensive than GoLang.</p>
+that make it desirable. Additionally its lack of garbage collection is still important in many situations.</p>
+<p>The problem I&rsquo;ve had with learning it is that the standard library is quite limited compared to GoLang and other modern languages.
+This makes it time consuming to find which library to use even for basic tasks. Rust is a community driven project though so this is to be expected. Cargo, Rusts build tool and package manager is a breathe of fresh air after dealing with C, make and header files.
+Unfortunately, due to Rust&rsquo;s C compatibility, its standard library depends on a systems lib-C so the threat of header file hell isn&rsquo;t totally gone.
+Fortunately it&rsquo;s unlikely these libraries will cause a problem, but it does make using rust on Kubernetes more memory expensive than GoLang.</p>
 <p>Unfortunately, Cargo does bring in other problems, mostly to do with poorly thought out and poorly trusted dependencies.</p>
 <p><img src="/images/1*fMh_BsX_5h2MZBqVj_no5A.png" alt="node_js" title="meme"></p>
-<p>Combine this with Rusts build times thanks to the borrow checker and static analysis and build times are enormous.</p>
+<p>Combine this with Rusts build times thanks to the borrow checker + static analysis and build times are enormous.</p>
 <h2 id="golang">
   GoLang
   <a class="heading-link" href="#golang">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p>Solves the build times skipping the static analysis and going back to garbage collection, and using a compiler built from the ground up. But still inherits the concept of packages, but with go modules that are basically just git repositories. This means building isn&rsquo;t as easy, but thanks to Go&rsquo;s monolithic standard library, you don&rsquo;t need to use it as much. Also go is much easier to learn it&rsquo;s syntax is mostly a subset of C and there is no borrow checker.</p>
-<p>Despite this, complex problems are more difficult to solve with more limited tools, and despite it&rsquo;s garbage collection, Go is not totally memory safe. It still allows usage of raw pointers, and Go Routines despite being very simple do not guarantee thread safety. Also, go is weird. It breaks the datetime format standard by using a <a href="https://golangbyexample.com/time-date-formatting-in-go/">placeholder date you&rsquo;re expected to memorise</a>.</p>
+<p>Solves the build times by skipping the static analysis and going back to garbage collection. It also uses a compiler built from the ground up. Go still inherits the concept of packages, but with go modules that are basically just git repositories. This means building isn&rsquo;t as easy, but thanks to Go&rsquo;s monolithic standard library, you don&rsquo;t need to use as many dependencies. Also Go&rsquo;s syntax is much easier to learn as it&rsquo;s mostly a subset of C and there is no borrow checker.</p>
+<p>Unfortunately, complex problems are more difficult to solve with more limited tools, and despite it&rsquo;s garbage collection, Go is not totally memory safe. It still allows usage of raw pointers, and despite Go Routines being very simple, they don&rsquo;t guarantee thread safety. Also, go is weird. It breaks the datetime format standard by using a <a href="https://golangbyexample.com/time-date-formatting-in-go/">placeholder date you&rsquo;re expected to memorise</a>.</p>
 <h2 id="kotlin">
   Kotlin
   <a class="heading-link" href="#kotlin">
@@ -223,14 +223,14 @@ Fortunately it&rsquo;s unlikely these libraries will cause a problem, but it doe
   </a>
 </h2>
 <p>Doesn&rsquo;t suffer from this oddity and includes tools for advanced abstraction, type safety, null safety, and functional programming but is much quicker to write than rust, as it&rsquo;s garbage collected.</p>
-<p>While Kotlin can compile to assembly, and even javascript, this is rarely useful as all the vast majority of it&rsquo;s useful libraries have Java dependencies. In fact, writing Kotlin will probably always involve interacting with Java classes, which means learning Java and dealing with Java&rsquo;s verbosity, mandatory object oriented programming scheme, exception handling and decades of technical debt.</p>
+<p>While Kotlin can compile to assembly, and even javascript, this is rarely useful as all the vast majority of it&rsquo;s useful libraries have Java dependencies. In fact, writing most Kotlin will probably always involve interacting with Java classes, which means learning Java and dealing with Java&rsquo;s verbosity, mandatory object oriented programming style, exception handling and decades of technical debt.</p>
 <h2 id="the-winner-is">
   The Winner is
   <a class="heading-link" href="#the-winner-is">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p>&hellip; No one. I&rsquo;m going to continue searching for that impossible perfection and probably continue and using all of these languages in the meantime.</p>
+<p>&hellip; No one. I&rsquo;m going to continue searching for that impossible perfection and probably continue using all of these languages in the meantime.</p>
 
       </div>
 
